@@ -1,7 +1,7 @@
 import Image from "next/image"
 import HeroImg from "../../public/homepage/hero-background.webp"
 import Button from "../ui/Button"
-
+const vidUrl = "homepage/ledger_dev_portal_anim.mp4"
 interface HeroProps {
   journeyId: string;
 }
@@ -10,6 +10,10 @@ export const Hero = ({ journeyId }: HeroProps) => {
   return (
     <div className="bg-black">
       <div className="relative max-w-[1440px] mx-auto md:bg-hero-background bg-contain bg-no-repeat bg-right">
+        <video width={300} height={300} autoPlay loop muted controls>
+          <source src={vidUrl} type="video/mp4"/>
+          Your browser does not support the video tag.
+        </video>
         <div className="pb-20 md:py-20 px-4 md:px-28" id="home">
           <div className="relative w-auto mx-auto md:hidden">
             <Image src={HeroImg} alt="hero" />
