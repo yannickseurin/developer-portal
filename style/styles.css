@@ -177,5 +177,4 @@ article a[target='_blank']:after {
 .video-container video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
