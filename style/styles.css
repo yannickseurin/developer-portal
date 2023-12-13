@@ -164,3 +164,18 @@ article a[target='_blank']:after {
 .tagText {
   @apply text-p-tag font-semibold uppercase;
 }
+
+.video-container {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  z-index: 2;
+  top: 85px;
+  right: 100px;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

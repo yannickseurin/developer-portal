@@ -9,11 +9,7 @@ interface HeroProps {
 export const Hero = ({ journeyId }: HeroProps) => {
   return (
     <div className="bg-black">
-      <div className="relative max-w-[1440px] mx-auto md:bg-hero-background bg-contain bg-no-repeat bg-right">
-        <video width={300} height={300} autoPlay loop muted controls>
-          <source src={vidUrl} type="video/mp4"/>
-          Your browser does not support the video tag.
-        </video>
+      <div className="relative max-w-[1440px]">
         <div className="pb-20 md:py-20 px-4 md:px-28" id="home">
           <div className="relative w-auto mx-auto md:hidden">
             <Image src={HeroImg} alt="hero" />
@@ -26,6 +22,12 @@ export const Hero = ({ journeyId }: HeroProps) => {
           </div>
           <Button label="Get Started" link={journeyId} svgIcon="arrow-right" type="white" className="relative mt-10 z-10" />
           <div className="absolute w-full hidden md:block h-28 bottom-0 left-0 bg-black-gradient-bottom" />
+        </div>
+        <div className="video-container">
+          <video autoPlay loop muted controls>
+            <source src={vidUrl} type="video/mp4"/>
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
